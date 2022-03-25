@@ -136,12 +136,44 @@ a {
 .contact-head:focus {
   color: var(--accent-color);
 }
+/* піктограми контактів */
+.contact-head::before {
+  display: inline-block;
+  content: '';
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+}
+.mail-icon::before {
+  background-image: url(../images/envelope.svg);
+  width: 16px;
+  height: 12px;
+}
+/* .mail-icon:hover::before {
+  background-image: url(../images/envelope\ -hover.svg);
+} */
+.tel-icon::before {
+  background-image: url(../images/smartphone.svg);
+  width: 10px;
+  height: 16px;
+}
 /* Герой */
 .hero {
   padding: 200px 0;
   background-color: var(--third-background-color);
   color: var(--third-text-color);
   text-align: center;
+}
+.overlay {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/Owerlay.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .hero-title {
   font-weight: 900;
@@ -184,7 +216,7 @@ a {
   text-align: center;
 }
 .adv-title {
-  margin-top: 0;
+  margin-top: 30px;
   margin-bottom: 10px;
 
   color: var(--primary-text-color);
@@ -205,6 +237,28 @@ a {
 }
 .adv-item:nth-child(4n) {
   margin-right: 0px;
+}
+/* додаємо іконки */
+.adv-item::before {
+  content: '';
+  display: inline-block;
+  width: 270px;
+  height: 120px;
+  background-color: var(--second-background-color);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.attent::before {
+  background-image: url(../images/antenna\ 1.svg);
+}
+.punct::before {
+  background-image: url(../images/clock\ 1.svg);
+}
+.plan::before {
+  background-image: url(../images/diagram\ 1.svg);
+}
+.tech::before {
+  background-image: url(../images/astronaut\ 1.svg);
 }
 .adv-paragraph {
   color: var(--second-text-color);
